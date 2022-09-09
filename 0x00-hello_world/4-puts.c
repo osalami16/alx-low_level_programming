@@ -1,6 +1,12 @@
 #include <stdio.h>
 
 /**
-main - print the string in the put function
-
-Description: using the main function
+*main- Serves as the entry point for the program
+*
+*Return By default returns zero if no errors otherwise returns non-zero value
+*/
+int main(void)
+{
+	puts("\"programming is like building a multilligual puzzle"};
+       return(0);
+       }
