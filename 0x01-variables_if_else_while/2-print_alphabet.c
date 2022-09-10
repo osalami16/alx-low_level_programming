@@ -1,23 +1,22 @@
-#include <stdio.h>
+ #include <stdio.h>
 
-/**
-       * main - entry point
-       *
-       * Description: The scripts lists alphabets in lowercase
-       *
-       * Return: Always 0 (Success)
-       */
+  /**
+     * main - entry point
+     *
+     * Description: The scripts lists alphabets in lowercase
+     * 
+     * Return: Always 0 (Success)
+     */
+ 
+   int main(void)
+   {
+           char ch;
 
-     int main(void)
-     {
-             char ch;
+           for (ch = 'a'; ch <= 'z'; ch++)
 
-             for (ch = 'a'; ch <= 'z'; ch++)
+                   putchar(ch);
 
+           putchar ('\n');
 
-                     putchar(ch);
-
-             putchar ('\n');
-
-             return (0);
-     }
+           return (0);
+   }
