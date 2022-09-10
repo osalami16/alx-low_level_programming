@@ -1,45 +1,23 @@
 #include <stdio.h>
 
-
-
 /**
+       * main - entry point
+       *
+       * Description: The scripts lists alphabets in lowercase
+       *
+       * Return: Always 0 (Success)
+       */
 
- * main - print the letters of the alphabet
+     int main(void)
+     {
+             char ch;
 
- *
-
- * Description: print the letters of the alphabet
-
- *
-
- * Return: Always 0 (Success)
-
- */
-
-
-
-int main(void)
-
-{
-
-	int i = 97;
+             for (ch = 'a'; ch <= 'z'; ch++)
 
 
+                     putchar(ch);
 
-	while (i < 123)
+             putchar ('\n');
 
-	{
-
-		putchar(i);
-
-		i++;
-
-	}
-
-	putchar(10);
-
-
-
-	return (0);
-
-}
+             return (0);
+     }
