@@ -1,38 +1,40 @@
-/* This program prints the alphabet in lowercase */
-
-
-
 #include <stdio.h>
 
 
 
 /**
 
- * main - Entry point
+ * main - print the letters of the alphabet
 
  *
 
- * Return: Always 0 (success)
+ * Description: print the letters of the alphabet
+
+ *
+
+ * Return: Always 0 (Success)
 
  */
+
+
 
 int main(void)
 
 {
 
-	int c = 97;
+	int i = 97;
 
 
 
-	do {
+	while (i < 123)
 
-		putchar(c);
+	{
 
-		c++;
+		putchar(i);
 
-	} while (c < 123);
+		i++;
 
-
+	}
 
 	putchar(10);
 
