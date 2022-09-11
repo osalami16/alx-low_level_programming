@@ -1,14 +1,16 @@
+  /* This script prints a text and exits */
+
 #include <stdio.h>
 
 /**
-* main - print the string in the put function
+ * main - Entry Point
+ *
+ * Return: Always 0 (Success)
+ */
 
-Description: using the main function 
-this program prints "programimg  is like building a multillingual puzzle
- *  Return: 0
-/
-int main(void)
+imt main(void)
 {
-        printf("with proper grammar, but the outcome is a piece of art,\n");
-        return (0);
-  }
+
+	printf("with proper grammar, but the outcome is a piece of art,\n");
+	return (0);
+}
