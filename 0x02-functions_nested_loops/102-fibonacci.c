@@ -1,34 +1,32 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
-* main - Entry point
+* main - entry point
+* prints out the first 50 fibonacci numbers starting with 1 and 2
 *
-* Description: prints the first 50 Fibonacci numbers
-*starting with 1 and 2 folled by a new line
-*
-*
-* Return: Always 0 (Success)
+* Return: Always 0
 */
-
 int main(void)
 {
-int count;
-unsigned long fib1 = 0, fib2 = 1, sum;
 
-for (count = 0; count < 50; ++count)
+unsigned long int f = 1; /* initially the f[irst] number in the sequence */
+unsigned long int s = 2; /* initially the s[econd] number in the sequence */
+int nfib = 50; /* the number of fibonacci number to generate */
+int cntr; /* counter (for the loop)*/
+unsigned long int next; /* this would hold the next fibonacci number */;
+
+printf("%ld, ", f);
+printf("%ld, ", s);
+for (cntr = 3; cntr < nfib; cntr++)
 {
-sum = fib1 + fib2;
-printf("%lu", sum);
-
-fib1 = fib2;
-fib2 = sum;
-
-if (count == 49)
-printf("\n");
-else
-printf(", ");
+/* next now hold the next number in the sequence */
+next = f + s;
+/* set f[irst] to the value of s[econd] */
+f = s;
+/* set s[econd] to the value of next */
+s = next;
+printf("%ld, ", next);
 }
-
+printf("%ld\n", f + s);
 return (0);
-
+}
