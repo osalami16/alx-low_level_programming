@@ -1,19 +1,26 @@
+#include <stdio.h>
 #include "main.h"
-/**
-* puts2 - print every second character of string
-* @str: parameter string
-*/
-void puts2(char *str) 
-{
-int a = 0;
 
-while (str[a] != '\0')
+/**
+* puts2 - prints every other character
+* @str: string
+*
+* Return: nothing
+*/
+
+void puts2(char *str)
 {
-if (a % 2 == 0)
+int i = 0;
+
+while (*(str + i) != '\0')
 {
-_putchar(str[a]);
+int i = 0;
+
+while (*(str + i) != '\0')
+{
+if (i % 2 == 0)
+putchar(*(str + i));
+i++;
 }
-a++;
-}
-_putchar('\n');
+putchar(10);
 }
