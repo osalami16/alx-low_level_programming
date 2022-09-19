@@ -1,34 +1,33 @@
 #include "main.h"
+#include <stdlib.h>
+#include <ctype.h>
 
 /**
-* _atoi -> Convert a tring to an integer
-*@s: The pointer to convert
-*
-*Return: An integer
+*  _atoi - convert a string to integer
+*  _atoi - convert a string to integer
+* Return: the integer gotten from the conversion
 */
-
 int _atoi(char *s)
 {
-int c = 0;
-unsigned int ni = 0;
-int min = 1;
-int isi = 0;
+short int m = 1; /* negative or positive multiplier */
+char *str = "";
+unsigned int i;
 
-while (s[c])
+while (*s != '\0')
 {
-if (s[c] == 45)
+if (*s == '-')
+m *= -1;
+else if (*s == '+')
+m *= +1;
+else if (isdigit(*s))
 {
-min *= -1;
-}
-
-if (isi == 1)
-{
+str = s;
 break;
 }
-
-c++;
+s += 1;
 }
-
-ni *= min;
-return (ni);
+i = atoi(str);
+if (i == 0)
+return (0);
+return (i * m);
 }
