@@ -1,7 +1,7 @@
 #include "main.h"
 /**
-*puts_half - print half array
-*@str: string
+* puts_half - print half array
+* @str: string
 */
 void puts_half(char *str)
 {
@@ -28,3 +28,4 @@ b++;
 }
 _putchar('\n');
 }
+
