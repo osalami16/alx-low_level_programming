@@ -1,26 +1,23 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
-* puts2 - prints every other character
-* @str: string
-*
-* Return: nothing
-*/
-
-void puts2(char *str)
+ * puts2 - print every other character in a string
+ * @s: the string to print
+ * Return: void
+ */
+void puts2(char *s)
 {
-int i = 0;
+	int i;
+	int n = 0; /* next index to print */
 
-while (*(str + i) != '\0')
-{
-int i = 0;
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (i != n)
+			continue;
+		_putchar(s[i]);
+		n = i + 2;
+	}
+	_putchar('\n');
 
-while (*(str + i) != '\0')
-{
-if (i % 2 == 0)
-putchar(*(str + i));
-i++;
-}
-putchar(10);
+
 }
