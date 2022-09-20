@@ -1,8 +1,8 @@
 #include "main.h"
 /**
-* puts_half - print half array
-* @str: string
-#/
+*puts_half - print half array
+*@str: string
+*/
 void puts_half(char *str)
 {
 int a = 0;
@@ -17,7 +17,7 @@ if (a % 2 == 0)
 {
 b = a / 2;
 }
-else 
+else
 {
 b = (a - 1) / 2;
 }
