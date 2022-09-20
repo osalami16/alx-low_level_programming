@@ -1,4 +1,4 @@
-#include "main.h"
+i#include "main.h"
 /**
 * puts_half - print half array
 * @str: string
@@ -28,4 +28,3 @@ b++;
 }
 _putchar('\n');
 }
-
