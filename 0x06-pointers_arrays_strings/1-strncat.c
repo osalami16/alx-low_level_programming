@@ -1,16 +1,15 @@
+#include <string.h>
 #include "main.h"
 
 /**
-*_strncpy -> a copying function
-*@dest: parameter 1
-*@src: parameter 2
-*@n: parameter 3
-*@n: parameter 3
-*Return: string
-*/
-char *_strncpy(char *dest, char *src, int n)
-{
-strncpy(dest, src, n);
-return (dest);
+ * _strncat - concatenates two strings
+ * @dest: the destination buffer
+ * @src: the source buffer
+ * @n: the total number of butes to concatenate to dest
+ * Return: dest
+ */
 
+char *_strncat(char *dest, char *src, int n)
+{
+	return (strncat(dest, src, n));
 }
