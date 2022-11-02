@@ -1,25 +1,15 @@
 #include "main.h"
-
+#include <stdlib.>
 /**
- * flip_bits - returns the number of bits you would need to flip to get
- * from one number to another
- * @n: a denary number
- * @m: another denary number
- * Return: an integer
+ * clear_bit - sets the value of a bit to 0 at a given index
+ * @n: parameter
+ * @index: index
+ * Return: 1 if works, -1 if error
  */
- uint flip_bits(ulong n, ulong m)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
-	ulong o;
-	uint i = 0;
-
-	o = n ^ m;
-
-	while (o)
-	{
-		if (o & 1)
-			i++;
-		o = o >> 1;
-	}
-	return (i);
+	if (index > sizeof(n) * 8)
+		return (-1);
+	*n &= ~(1 << index);
+	return (1);
 }
- 
