@@ -2,28 +2,25 @@
 
 /**
  * sum_dlistint - returns the sum of all the data (n)
- * of a doubly linked list
+ * of a linked list
  *
- * @head: head of the list
- * Return: sum of the data
+ * @head: the head of the linked list.
+ *
+ * Return: the sum of all the data in the linked list
  */
-int sum_dlistint(dlistint_t *head)
-{
-	int sum;
-
-	sum = 0;
-
-	if (head != NULL)
+int sum_dlistint(node *head)
 	{
-		while (head->prev != NULL)
-			head = head->prev;
+		node *temp = head;
+		int sum = 0;
 
-		while (head != NULL)
-		{
-			sum += head->n;
-			head = head->next;
+		if (!head)
+			return (0);
+		while (temp->prev)
+			temp = temp->prev;
+		while (temp)
+			{
+				sum += temp->n;
+				temp = temp->next;
+				}
+		return (sum);
 		}
-	}
-
-	return (sum);
-}
